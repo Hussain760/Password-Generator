@@ -57,15 +57,15 @@ function App() {
 
   function randomPassword() {
     let result = []
-    for (let i = 0; i < FormData.range; i++) {
-      const arr = [
-        FormData.upperCase && randomUpperCase(),
-        FormData.lowerCase && randomLowerCase(),
-        FormData.numbers && randomNumber(),
-        FormData.symbols && randomSymbols(),
+    const arr = [
+        FormData.upperCase && randomUpperCase,
+        FormData.lowerCase && randomLowerCase,
+        FormData.numbers && randomNumber,
+        FormData.symbols && randomSymbols,
       ]
-      const fillterArr = arr.filter(Boolean)
-      result.push(fillterArr[Math.floor(Math.random() * fillterArr.length)])
+    const fillterArr = arr.filter(Boolean)
+    for (let i = 0; i < FormData.range; i++) {
+      result.push(fillterArr[Math.floor(Math.random() * fillterArr.length)]())
     }
     return result
   }

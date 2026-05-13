@@ -7,7 +7,7 @@ function App() {
     lowerCase: true,
     numbers: true,
     symbols: true,
-    range: 8 || 1,
+    range: 8,
   })
 
   if (FormData.range > 40) {

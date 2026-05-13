@@ -11,13 +11,23 @@ function App() {
   })
 
   if (FormData.range > 40) {
-    setFormData(pre => {
+    setFormData(pre => {l
       return {
         ...pre,
         range: 40,
       }
     })
   }
+
+if (FormData.range == 0) {
+    setFormData(pre => {l
+      return {
+        ...pre,
+        range: 1,
+      }
+    })
+}
+
 
   function handleChange(event) {
     setFormData(prev => {
@@ -149,8 +159,6 @@ function App() {
             name='range'
             onChange={handleChange}
             id='rangeValue'
-            min='1'
-            max='40'
           />
           <input
             type='range'

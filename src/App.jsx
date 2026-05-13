@@ -56,7 +56,7 @@ function App() {
   }
 
   function randomPassword() {
-    let result = []
+    let result = ["Select One of the Checks"]
     const arr = [
         FormData.upperCase && randomUpperCase,
         FormData.lowerCase && randomLowerCase,
@@ -64,8 +64,12 @@ function App() {
         FormData.symbols && randomSymbols,
       ]
     const fillterArr = arr.filter(Boolean)
+
+    if (fillterArr.length) {
+    result = []
     for (let i = 0; i < FormData.range; i++) {
       result.push(fillterArr[Math.floor(Math.random() * fillterArr.length)]())
+    }
     }
     return result
   }

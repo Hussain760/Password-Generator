@@ -149,6 +149,8 @@ function App() {
             name='range'
             onChange={handleChange}
             id='rangeValue'
+            min='1'
+            max='40'
           />
           <input
             type='range'

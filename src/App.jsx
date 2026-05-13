@@ -7,7 +7,7 @@ function App() {
     lowerCase: true,
     numbers: true,
     symbols: true,
-    range: 8,
+    range: 8 || 1,
   })
 
   if (FormData.range > 40) {
@@ -18,16 +18,6 @@ function App() {
       }
     })
   }
-
-if (FormData.range == 0) {
-    setFormData(pre => {l
-      return {
-        ...pre,
-        range: 1,
-      }
-    })
-}
-
 
   function handleChange(event) {
     setFormData(prev => {

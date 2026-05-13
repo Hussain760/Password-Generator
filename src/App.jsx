@@ -56,7 +56,7 @@ function App() {
   }
 
   function randomPassword() {
-    let result = ["Select One of the Checks"]
+    let result = ["Select One of the Options"]
     const arr = [
         FormData.upperCase && randomUpperCase,
         FormData.lowerCase && randomLowerCase,
@@ -165,7 +165,7 @@ function App() {
             Copy
           </button>
           <button className='btn' onClick={handleSubmit}>
-            Genrate
+            Generate
           </button>
         </div>
       </section>

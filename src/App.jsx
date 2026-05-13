@@ -153,7 +153,7 @@ function App() {
           <input
             type='range'
             id='range'
-            min='0'
+            min='1'
             max='40'
             name='range'
             value={FormData.range}
